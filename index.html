@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Тест Лаб_4</title>
+	<meta http-equiv="Content-type" content="text/html;charset-UTF-8" />
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Coming+Soon:regular" rel="stylesheet" />
+</head>
+
+<body>
+
+	<div class="main">
+
+
+
+
+		<div id="test">
+			<div class="persinf">
+				<div>
+					<p>Personal Information:</p>
+					<div><span>Ім'я</span><input type="text" id="name" name="name"></div>
+					<div><span>Прізвище</span><input type="text" id="surname" name="surname" required="true"></div>
+					<div><span>Група</span>
+						<select name="group" id="group">
+							<option value="---">---</option>
+							<option value="ТР-11">ТР-11</option>
+							<option value="ТР-12">ТР-12</option>
+							<option value="ТР-13">ТР-13</option>
+						</select>
+					</div>
+					<div><span>Email</span><input type="text" name="email" required="true"></div>
+				</div>
+				<div class="inf">
+					<p>Тест на тему <i>"Адаптивний веб-дизайн. Grid CSS"</i></p>
+					<br>
+					<p>Підготував студент Групи ТР-11</p>
+					<p><b>Голосний Данило</b></p>
+				</div>
+			</div>
+			<p class="title"><i>"Адаптивний веб-дизайн. Grid CSS"</i></p>
+			<script src="/js/script1.js"></script>
+
+			<div class="testItem">
+				<p><b>№9</b> Потрібно зробити 3 колонки шириною 100px, 300px, 100px. Висота кожного ряду повинна бути 100px.
+					Виберіть правильну відповідь (перетягніть частинки коду в правильній послідовності)</p>
+
+				<!---grid-template-columns: 100px 300px 100px; grid-template-rows: 100px --->
+				<div class="panel">
+					<div class="elem" draggable="true" data-answer-num="1"> 100px 300px 100px;</div>
+					<div class="elem" draggable="true" data-answer-num="2"> 100px;</div>
+					<div class="elem" draggable="true" data-answer-num="3">grid-template-rows:</div>
+					<div class="elem" draggable="true" data-answer-num="4">grid-template-columns:</div>
+
+				</div>
+
+				<p class="dr_v">Відповідь:</p>
+
+				<div id="parent"></div>
+			</div>
+
+			<div id="grid" class="testItem">
+				<p><b>№10</b> Виправити помилки для створення grid-шаблону для адаптивного веб-дизайну (як на кртинці).</p>
+				<img class="example" src="img/p1.png" alt="">
+
+				<div class="num10">
+					<div class="try0">
+						<p><b>.grid-style{</b></p>
+						<textarea name="message" id="textArea">
+display: grid;
+grid-template-columns: repeat(9, 1fr);
+grid-auto-rows: minmax(100px, auto);
+grid-template-areas:
+"sd sd hd hd   hd   hd   hd   hd   hd"
+"sd sd main main main main main main main"
+"sd sd ft  ft  ft   ft   ft   ft   ft";
+</textarea>
+						<p><b>}</b></p>
+						<div>
+							<button id="bt2">Застосувати</button>
+						</div>
+					</div>
+					<div class="try" id="try">
+						<p>Результат:</p>
+						<br>
+						<div class="wrapper">
+							<div class="header">Header</div>
+							<div class="sidebar">Sidebar</div>
+							<div class="content">Content</div>
+							<div class="footer">Footer</div>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+
+
+		</div>
+
+		<div class="btn">
+			<button id="bt" type="submit">check</button>
+		</div>
+
+
+
+
+		<script src="https://smtpjs.com/v3/smtp.js">	</script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+		<script src="/js/script2.js"></script>
+		<script src="/js/scriptTask_from_lab.js"></script>
+	</div>
+
+</body>
+
+</html>
